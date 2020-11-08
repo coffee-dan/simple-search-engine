@@ -1,0 +1,1 @@
+It is a good idea to learn the Python programming language to succeed in data mining.

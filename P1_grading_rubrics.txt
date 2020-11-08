@@ -1,0 +1,36 @@
+CSE4334 Data Mining
+Fall 2019
+Programming Assignment 1 (P1) grading rubrics:
+
+(1) Correctness (50 points)
+We will evaluate your code by calling the following functions. Please refer to the assignment for detialed explanantion of their requied input and output. 
+
+*query(qstring): return a tuple in the form of (filename of the document, score), where the document is the query answer with respect to "qstring" . If no document contains any token in the query, return ("None",0). If we need more than 10 elements from each posting list, return ("fetch more",0).
+
+* getidf(token): return the inverse document frequency of a token. If the token doesn't exist in the corpus, return -1. The parameter 'token' is already stemmed. (It means you should not perform stemming inside this function.) Note the differences between getidf("hispan") and getidf("hispanic"). 
+
+* getweight(filename,token): return the TF-IDF weight of a token in the document named 'filename'. If the token doesn't exist in the document, return 0. The parameter 'token' is already stemmed. (It means you should not perform stemming inside this function.) Note that both getweight("1960-10-21.txt","reason") and getweight("2012-10-16.txt","hispanic") return 0, but for different reasons. 
+
+We will use a script to automatically grade your code. So, make sure to use the same function names, parameter names/types/orders as specified above. 
+
+There will be 50 test cases, of which each is worth 1 point. (25 points for function ‘query’, 10 points for function ‘getidf’, 15 points for function ‘get weight’.) Make sure your program will behave correctly under boundary cases and incorrect input. 
+
+(2) Efficiency(30 points)
+We will run the codes of all students to get a median speed as reference. We will assign more points to faster programs. 
+
+1st tier (5-10 seconds): 30 points.
+2nd tier : 25 points
+3rd iter : 20 points.
+4th tier : 15 points
+5th tier speed or your program cannot successfully execute without TA's tuning: 10 points
+Extremely slow or not doing anything meaningful: 0 points. 
+
+(3) Quality (Clarity, organization, modularity, documentation) :20 points
+Follow good coding standards to make your program easy to understand by others and easy to maintain/extend.
+
+High mark  : 20 points
+Medium mark : 12 points
+Low mark : 6 points
+
+Your score will be calculated from the individual break-ups using the following equation:
+(Correctness * .50) + (Efficiency * .30) + (Quality * .20)
